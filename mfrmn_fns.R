@@ -5,7 +5,7 @@
 # LOADS PACKAGES BY TYPE
 load.pckgs <- function(pckg_type) {
     pckgs <- c()
-    if("datasci" %in% pckg_type) pckgs <- c(pckgs,"dplyr","data.table","lubridate","rattle")
+    if("datasci" %in% pckg_type) pckgs <- c(pckgs,"lubridate","rattle","dplyr","tidyr","data.table")
     if("dbase" %in% pckg_type) pckgs <- c(pckgs,"RSQLite")
     if("graph" %in% pckg_type) pckgs <- c(pckgs,"ggplot2","grid","scales","gridExtra")
     invisible(lapply(pckgs, require, character.only=T))
