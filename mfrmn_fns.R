@@ -28,3 +28,13 @@ ggplot.theme <- function() {
           panel.border = element_rect(size=2, fill=NA))
 }
 
+######################
+## FUNCTIONS
+######################
+
+# Function to round and print to x digits
+prtround <- function(x, digits = 1) formatC(round(x, digits=digits), format="f", digits=digits)
+
+# Function to round and print to x digits, with commas
+prtround.wc <- function(x, digits = 1) formatC(round(x, digits=digits), big.mark = ",", format="f", digits=digits)
+  
